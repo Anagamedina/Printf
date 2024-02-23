@@ -6,7 +6,7 @@
 #    By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 11:23:29 by anamedin          #+#    #+#              #
-#    Updated: 2024/02/23 12:44:31 by anamedin         ###   ########.fr        #
+#    Updated: 2024/02/23 14:42:44 by anamedin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ ARC = ar -rcs
 NAME = libftprintf.a
 HEADER = ft_printf.h
 
-SRCS = 
+SRCS = 	void ft_putnbr(int n)\
+		int	ft_putchar (char c);\
+		int	ft_printf(char const *str, ...);
 
 OBJS = $(SRCS:.c=.o)
 

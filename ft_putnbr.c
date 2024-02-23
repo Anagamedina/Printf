@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 12:46:16 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/23 14:41:50 by anamedin         ###   ########.fr       */
+/*   Created: 2024/02/23 14:22:32 by anamedin          #+#    #+#             */
+/*   Updated: 2024/02/23 14:39:01 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-void ft_putnbr(int n);
-int	ft_putchar (char c);
-int	ft_printf(char const *str, ...);
+void ft_putnbr(int n)
+{
+    if (n == -2147483648)
+    {
+        write(1, "-2147483648", 11);
+    }
+    else
+    {
+        if (n < 0)
+        {
+            write(1, "-", 1);
+            n *= (-1);
+        }
+        if (n > 9)
+            ft_putnbr(n / 10);
+       ft_putchar((n % 10) + '0');
+    }
+}
 
-
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <stdio.h>
-
-#endif

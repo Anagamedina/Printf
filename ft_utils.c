@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 12:46:16 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/23 14:41:50 by anamedin         ###   ########.fr       */
+/*   Created: 2024/02/23 16:33:04 by anamedin          #+#    #+#             */
+/*   Updated: 2024/02/23 16:34:09 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_prinft.h"
 
-void ft_putnbr(int n);
-int	ft_putchar (char c);
-int	ft_printf(char const *str, ...);
+static int	print_long_as_hex(long unsigned addr)
+{
+	char	c;
+	int		total;
 
+	total = 0;
+	if (addr >= 16)
+	{
+		total += print_long_as_hex(addr / 16);
+		total += print_long_as_hex(addr % 16);
+	
+	else
+	{
+		c = (addr % 16) + '0';
+		if ((addr % 16) > 9)
+			c = ((addr % 16) + 87);
+		write(1, &c, 1);
+		total++;
+	}
+	return (total);
+}
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <stdio.h>
-
-#endif
