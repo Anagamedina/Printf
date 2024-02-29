@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_conver.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 13:13:34 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 10:43:07 by anamedin         ###   ########.fr       */
+/*   Created: 2024/02/29 10:02:47 by anamedin          #+#    #+#             */
+/*   Updated: 2024/02/29 10:52:15 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int ft_conver(const char *str, va_list args)
 {
-	write(1, &c, 1);
-	return(0);
+	int	count;
+
+	count = 0;
+	if(*str == 'c')
+		count += ft_putchar(va_arg(args, int));
+	return(count);
 }
