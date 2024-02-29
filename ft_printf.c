@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 10:55:23 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/02/29 11:33:43 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ int	main()
 {
 	ft_printf("char: %c\n", 'a');
  	printf("ORIGINAL --> char: %c\n", 'a');
+
+	// 	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+	ft_printf("str: %s\n", "Ana");
+	printf("ORIGINAL --> str: %s\n", "Ana");
+	// ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
 }

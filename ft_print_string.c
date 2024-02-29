@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 10:44:31 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 11:24:15 by anamedin         ###   ########.fr       */
+/*   Created: 2024/02/29 11:00:01 by anamedin          #+#    #+#             */
+/*   Updated: 2024/02/29 11:41:19 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdio.h>
+int	ft_print_string(char *str)
+{
+	int	i;
 
-int   ft_printf(char const *str, ...);
-int   ft_putchar(char c);
-void  ft_putnbr(int n);
-int   ft_conver(const char *str, va_list args);
-int   ft_print_string(char *str);
-
-
-#endif
+	i = 0;
+	if(str == NULL)
+	{
+		ft_print_string("(null)");
+		return(-1);
+	}
+	while(str[i] != '\0')
+	{
+		if (ft_putchar(str[i]) == -1)
+			return(-1);
+		i++;
+	}
+	return(i);
+}
