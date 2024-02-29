@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 11:00:01 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 11:41:19 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/02/29 11:49:46 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_print_string(char *str)
 	int	i;
 
 	i = 0;
-	if(str == NULL)
+	if(!str)
 	{
 		ft_print_string("(null)");
 		return(-1);
