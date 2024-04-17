@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:13:34 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 10:43:07 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:21:52 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	return(0);
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	return (1);
 }

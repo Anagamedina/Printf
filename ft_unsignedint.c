@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_unsignedint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 11:28:37 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 13:25:31 by anamedin         ###   ########.fr       */
+/*   Created: 2024/04/17 13:48:07 by anamedin          #+#    #+#             */
+/*   Updated: 2024/04/17 14:14:36 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(long n)
+/*unsigned int	ft_unsignedint(unsigned int n)
 {
-	int	count;
+	int	result;
 
-	count = 0;
-	if (n < 0)
+	result = 0;
+	if (n >= 10)
 	{
-		count += ft_putchar('-');
-		if (n != -2147483648)
-			n = -n;
-		else
-			return (-1);
-	}
-	if (n > 9)
-	{
-		count += ft_putnbr(n / 10);
-		if (count == -1)
+		result += ft_unsignedint(n / 10);
+		if (result == 1)
 			return (-1);
 		n = n % 10;
 	}
 	if (n <= 9)
 	{
-		if (ft_putchar(n + '0') == -1)
+		if (ft_putchar((n + '0')) == -1)
 			return (-1);
-		count++;
+		result++;
 	}
-	return (count);
+	return (result);
+}*/
+
+unsigned int	ft_unsignedint(unsigned int n)
+{
+	int	result;
+
+	result = 0;
+	if (n >= 10)
+	{
+		result += ft_unsignedint(n / 10);
+	}
+	if (ft_putchar((n % 10) + '0') == -1)
+		return (-1);
+	result++;
+	return (result);
 }
