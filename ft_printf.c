@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 14:43:15 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:57:47 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static int	ft_conver(char *format, va_list args)
 		count += ft_unsignedint(va_arg(args, unsigned int));
 	else if (*format == 'x')
 		count += ft_hex(va_arg(args, unsigned int), count);
+	else if (*format == '%')
+		count += ft_putchar('%');
 	return (count);
 }
 
@@ -89,5 +91,9 @@ int main(void)
     ft_printf("Myprintf --> hex: %x\n", 2423333);
     printf("ORIGINAL --> hex: %x\n", 2423333);
 
-    return 0;
+
+    ft_printf("Myprintf --> PERC : %%\n", %);
+    printf("ORIGINAL --> PERC : %%\n", %);
+
+    return (0);
 }
