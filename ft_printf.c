@@ -6,13 +6,13 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 14:00:40 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:43:15 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_conver(const char *format, va_list args)
+static int	ft_conver(char *format, va_list args)
 {
 	int	count;
 
@@ -32,6 +32,8 @@ static int	ft_conver(const char *format, va_list args)
 		count += ft_putnbr(va_arg(args, int));
 	else if (*format == 'u')
 		count += ft_unsignedint(va_arg(args, unsigned int));
+	else if (*format == 'x')
+		count += ft_hex(va_arg(args, unsigned int), count);
 	return (count);
 }
 
@@ -83,6 +85,9 @@ int main(void)
 
     ft_printf("Myprintfuint --> uint: %u\n", 24230);
     printf("ORIGINAL --> uint: %u\n", 24230);
+
+    ft_printf("Myprintf --> hex: %x\n", 2423333);
+    printf("ORIGINAL --> hex: %x\n", 2423333);
 
     return 0;
 }
