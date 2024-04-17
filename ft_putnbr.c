@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 14:22:32 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/23 14:39:01 by anamedin         ###   ########.fr       */
+/*   Created: 2024/04/17 02:21:22 by anamedin          #+#    #+#             */
+/*   Updated: 2024/04/17 02:21:41 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
     if (n == -2147483648)
     {
@@ -27,7 +27,6 @@ void ft_putnbr(int n)
         }
         if (n > 9)
             ft_putnbr(n / 10);
-       ft_putchar((n % 10) + '0');
+        ft_putchar((n % 10) + '0');
     }
 }
-

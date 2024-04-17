@@ -6,7 +6,7 @@
 #    By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 11:23:29 by anamedin          #+#    #+#              #
-#    Updated: 2024/02/29 11:52:15 by anamedin         ###   ########.fr        #
+#    Updated: 2024/04/17 02:59:04 by anamedin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,8 @@ HEADER = ft_printf.h
 SRCS = 	ft_printf.c\
 		ft_putchar.c\
 		ft_putnbr.c\
-		ft_conver.c\
 		ft_print_string.c\
-		ft_print_ptr
+		ft_hex.c
 
 
 OBJS = $(SRCS:.c=.o)

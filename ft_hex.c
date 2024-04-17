@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_conver.c                                        :+:      :+:    :+:   */
+/*   ft_hex.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 10:02:47 by anamedin          #+#    #+#             */
-/*   Updated: 2024/02/29 10:59:42 by anamedin         ###   ########.fr       */
+/*   Created: 2024/04/17 02:46:20 by anamedin          #+#    #+#             */
+/*   Updated: 2024/04/17 02:54:36 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_conver(const char *str, va_list args)
+int	ft_hex(unsigned long nbr, char str)
 {
-	int	count;
+	int		count;
+	char	*base;
 
 	count = 0;
-	if(*str == 'c')
-		count += ft_putchar(va_arg(args, int));
-	else if(*str == 's')
-		count += ft_print_string(va_arg(args, char *));
-	return(count);
+	if (str == 'x' || str == 'p')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	if (nbr >= 16)
+	{
+		count += ft_hex(nbr / 16, str);
+		if (count == -1)
+			return (-1);
+	}
+	if ((ft_putchar(base[nbr % 16]) == -1))
+		return (-1);
+	count++;
+	return (count);
 }
