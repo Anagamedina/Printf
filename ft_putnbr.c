@@ -6,17 +6,41 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:28:37 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/19 11:03:20 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 20:35:49 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+int	ft_putnbr_rec(long n)
+{
+	int	count;
+	int write_return;
+
+	count = 0;
+	if (n >= 10)
+	{
+		write_return = ft_putnbr(n / 10);
+		if(write_return == -1)
+			return (-1);
+		count += write_return;
+	}
+	write_return = ft_putchar(n % 10 + '0');
+	if (write_return == -1)
+		return (-1);
+	count +=write_return;
+	return (count);
+}
+
+
 int	ft_putnbr(long n)
 {
 	int	count;
+	int write_return;
 
 	count = 0;
+	if (n == -2147483648)
+		return (ft_print_string("-2147483648"));
 	if (n < 0)
 	{
 		count += ft_putchar('-');
@@ -24,22 +48,9 @@ int	ft_putnbr(long n)
 			return (-1);
 		n = -n;
 	}
-	if (n == -2147483648)
-	{
-		return (ft_print_string("2147483648"));
-	}
-	if (n > 9)
-	{
-		count += ft_putnbr(n / 10);
-		if (count == -1)
-			return (-1);
-		n = n % 10;
-	}
-	if (n <= 9)
-	{
-		if (ft_putchar(n + '0') == -1)
-			return (-1);
-		count++;
-	}
+	write_return = ft_putnbr_rec(n);
+	if (write_return == -1)
+		return (-1);
+	count += write_return;
 	return (count);
 }

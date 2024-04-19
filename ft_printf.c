@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/19 15:03:32 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 20:27:40 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,12 @@ int	ft_printf(char const *format, ...)
 	return (total_chars);
 }
 
+/*int main(void)
+{
+	ft_printf("BYANA --> d: %d\n", 10);
+    printf("ORIGI --> d: %d\n", 10);
+	return (0);
+}*/
 /*int	main(void)
 {
 	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
@@ -79,23 +85,8 @@ int	ft_printf(char const *format, ...)
 	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
 	ft_printf("BYANA->%u\n", -10);
 	printf("ORIGI->%u\n", -10);
-	ft_printf("\n> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+	ft_printf("\n> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");*/
 
-	unsigned int tests[] = {0, 1, 12345, 987654321, 4294967295, 2147483648};
-    int num_tests = sizeof(tests) / sizeof(tests[0]);
-
-    printf("Testing with printf:\n");
-    for (int i = 0; i < num_tests; ++i) {
-        printf("Test %d: %u\n", i + 1, tests[i]);
-    }
-
-    printf("\nTesting with ft_printf:\n");
-    for (int i = 0; i < num_tests; ++i) {
-        printf("Test %d: ", i + 1);
-        ft_printf("%u\n", tests[i]);
-    }
-	return (0);
-}*/
 
 /*
 int	main(void)
@@ -109,6 +100,8 @@ int	main(void)
 	return (0);
 }
 */
+
+
 
 /*
 //int main(void)
@@ -166,9 +159,6 @@ int	main(void)
 	printf("ORIGI8-->%c %c %c\n ", '2', '1', 0);
 	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
 
-//	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
-
-//	ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
 
 //  ft_printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");*/
 
