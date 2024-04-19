@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 10:44:31 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/19 02:15:50 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:47:44 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int				ft_printf(char const *format, ...);
 int				ft_putchar(char c);
 int				ft_putnbr(long n);
 int				ft_print_string(char *str);
-int				ft_hex(unsigned long nbr,const char str);
-
+int				ft_hex(unsigned long nbr, const char str);
 unsigned int	ft_unsignedint(unsigned int n);
 #endif

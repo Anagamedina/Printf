@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:48:07 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 14:14:36 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:52:01 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 
 unsigned int	ft_unsignedint(unsigned int n)
 {
-	int	result;
+	unsigned int	result;
 
 	result = 0;
 	if (n >= 10)
