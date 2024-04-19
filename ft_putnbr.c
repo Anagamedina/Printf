@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:28:37 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 13:25:31 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 11:03:20 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ int	ft_putnbr(long n)
 	if (n < 0)
 	{
 		count += ft_putchar('-');
-		if (n != -2147483648)
-			n = -n;
-		else
+		if (count == -1)
 			return (-1);
+		n = -n;
+	}
+	if (n == -2147483648)
+	{
+		return (ft_print_string("2147483648"));
 	}
 	if (n > 9)
 	{

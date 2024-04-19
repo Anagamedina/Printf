@@ -6,13 +6,13 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 02:46:20 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/17 02:54:36 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/19 02:16:06 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hex(unsigned long nbr, char str)
+int	ft_hex(unsigned long nbr, const char str)
 {
 	int		count;
 	char	*base;
