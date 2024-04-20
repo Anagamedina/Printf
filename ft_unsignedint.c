@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:48:07 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/20 11:27:37 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/20 12:23:07 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static unsigned int	ft_unsigned_rec(unsigned int n)
 {
 	int	count;
-	int write_return;
+	int	write_return;
 
 	count = 0;
 	if (n >= 10)
@@ -32,11 +32,11 @@ static unsigned int	ft_unsigned_rec(unsigned int n)
 	return (count);
 }
 
-unsigned int ft_unsignedint(unsigned int n)
+unsigned int	ft_unsignedint(unsigned int n)
 {
-	int count;
-	int write_return;
-	
+	int	count;
+	int	write_return;
+
 	count = 0;
 	write_return = ft_unsigned_rec(n);
 	if (write_return == -1)
