@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/20 11:30:01 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/20 13:16:33 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,62 @@ int	ft_printf(char const *format, ...)
 	return (total_chars);
 }
 
+/*int main() {
+    printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %c - Imprime un solo carácter
+    ft_printf("BYANA --> %c \n", 'A');
+    printf("ORIGI --> %c \n", 'A');
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %s - Imprime una string
+    ft_printf("BYANA --> %s \n", "Hola mundo");
+    printf("ORIGI --> %s \n", "Hola mundo");
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %p - Imprime un puntero en formato hexadecimal
+    char str[] = "Ejemplo";
+    void *ptr = &str;
+    ft_printf("BYANA --> %p \n", ptr);
+    printf("ORIGI --> %p \n", ptr);
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+   // %d - Imprime un número decimal (base 10)
+    int num = 42;
+    ft_printf("BYANA --> %d \n", num);
+    printf("ORIGI --> %d \n", num);
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %i - Imprime un entero en base 10
+    ft_printf("BYANA --> %i \n", num);
+    printf("ORIGI --> %i \n", num);
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %u - Imprime un número decimal sin signo
+    unsigned int uns_num = 100;
+    ft_printf("BYANA --> %u \n", uns_num);
+    printf("ORIGI --> %u \n", uns_num);
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %x - Imprime un número hexadecimal en minúsculas
+    ft_printf("BYANA --> %x \n", num);
+    printf("ORIGI --> %x \n", num);
+	printf(">\n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %X - Imprime un número hexadecimal en mayúsculas
+    ft_printf("BYANA --> %X \n", num);
+    printf("ORIGI --> %X \n", num);
+	printf("> \n -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n");
+
+    // %% - Imprime el símbolo del porcentaje
+    ft_printf("BYANA --> %% \n");
+    printf("ORIGI --> %% \n");
+
+    printf("> -  -  -  -  -  -  -  -  -  -  -  -  -  -  - <\n"); 
+    return 0;
+}*/
+
+//////////////////////////////////////////////////
 /*int main(void)
 {
 	ft_printf("BYANA --> d: %d\n", 10);
