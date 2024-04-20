@@ -6,7 +6,7 @@
 #    By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 11:23:29 by anamedin          #+#    #+#              #
-#    Updated: 2024/04/20 11:23:49 by anamedin         ###   ########.fr        #
+#    Updated: 2024/04/20 12:28:42 by anamedin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = 	ft_printf.c\
 		ft_putchar.c\
 		ft_putnbr.c\
 		ft_print_string.c\
-		ft_hex.c \
+		ft_hex.c\
 		ft_unsignedint.c
 
 OBJS = $(SRCS:.c=.o)
