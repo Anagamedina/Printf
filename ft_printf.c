@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 12:59:46 by anamedin          #+#    #+#             */
-/*   Updated: 2024/04/20 10:52:15 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/04/20 11:30:01 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,11 @@ int	ft_printf(char const *format, ...)
 		if (ptr[i] == '%')
 		{
 			total_chars += ft_conver(&ptr[i + 1], args);
-			if (total_chars == -1)
-				return (-1);
 			i++;
 		}
 		else
 		{
 			total_chars += ft_putchar(ptr[i]);
-			if (total_chars == -1)
-				return (-1);
 		}
 		i++;
 	}
